@@ -16,6 +16,8 @@ public class BrainSaladSurgery {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Room test = new Room();
+        System.out.println(test);
     }
     
 }
