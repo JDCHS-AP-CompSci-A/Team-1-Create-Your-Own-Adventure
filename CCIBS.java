@@ -9,6 +9,7 @@ public class CCIBS {
        
        Player player_test = new Player();
        
+       
        System.out.println(player_test.Dmg());
        System.out.println(player_test.Shoot());
        
