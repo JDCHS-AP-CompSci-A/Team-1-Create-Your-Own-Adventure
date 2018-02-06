@@ -5,11 +5,10 @@ public class Enemy {
     double health;
     double damage;
     int armor;
-    int accuracy;
+    Random dice = new Random();
+        int accuracy = dice.nextInt(20) + 1;
     
     Enemy(double health, double damage, int armor){
-        Random generator = new Random(20);
-        this.accuracy = generator.nextInt();
         this.damage = damage;
     }
       public double Dmg(){

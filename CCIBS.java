@@ -7,6 +7,11 @@ public class CCIBS {
        System.out.println(enemy_test.Dmg());
        System.out.println(enemy_test.Shoot());
        
+       Player player_test = new Player();
+       
+       System.out.println(player_test.Dmg());
+       System.out.println(player_test.Shoot());
+       
        Room room_test = new Room();
        System.out.println(room_test);
     }
