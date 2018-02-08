@@ -8,10 +8,11 @@ public class Enemy {
     Random dice = new Random();
         int accuracy = dice.nextInt(20) + 1;
     
-    Enemy(double health, double damage, int armor){
+    public Enemy(double health, double damage, int armor){
         this.damage = damage;
     }
-      public double Dmg(){
+      
+    public double Dmg(){
           double damage = this.damage;
           if(this.accuracy == 20){
               damage = damage*1.5;
@@ -19,7 +20,8 @@ public class Enemy {
           
           return damage;
       }
-      public boolean Shoot(){
+    
+    public boolean Shoot(){
           if(this.accuracy <= 13){
               return false;
           }

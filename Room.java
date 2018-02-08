@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.ArrayList;
 
 class Room {
-    //ArrayList<Enemy> enemylist = new ArrayList();
+    ArrayList<Enemy> enemylist = new ArrayList();
     Random dice = new Random();
     int e = dice.nextInt(3) + 1;
 
@@ -10,8 +10,7 @@ class Room {
         return "toms";
 
     }
-    /*
-    public void getenemy(){
+    public void getenemy(Enemy){
         if(e == 1){
             this.enemylist.add();
         }else if(e == 2)
@@ -19,5 +18,5 @@ class Room {
         }else(){
             this.enemylist.add();
         }
-    }*/
+    }
 }
