@@ -3,26 +3,27 @@ import java.util.Random;
 
 public class Player {
 
-    double health = 400.0;
-    double damage;
+    double player_health;
+    double base_damage = 10;
     int trgvalue;
     Random dice = new Random();
-    int accuracy = dice.nextInt(10) + 1;
 
-    Player() {
-        this.damage = 20.0;
+    Player(double player_health){
+        this.player_health = player_health;
     }
 
     public double Dmg() {
-        double damage = this.damage;
-        if (this.accuracy == 10) {
-            damage = damage * 1.5;
+        double damage = this.base_damage;
+        int accuracy = dice.nextInt(10) + 1;
+        if (accuracy == 10) {
+            damage = this.base_damage * 1.5;
         }
         return damage;
     }
     
     public boolean Shoot(){
-          if(this.accuracy <= 4){
+         int accuracy = dice.nextInt(10) + 1;
+          if(accuracy <= 4){
               return false;
           }
           else{
