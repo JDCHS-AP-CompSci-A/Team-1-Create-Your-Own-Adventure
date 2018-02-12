@@ -22,15 +22,16 @@ public class Player {
     }
     
     public boolean Shoot(){
-         int accuracy = dice.nextInt(10) + 1;
-          if(accuracy <= 4){
-              return false;
-          }
-          else{
-              return true;
-                      
-          }
-      }
+        int accuracy = dice.nextInt(10) + 1;
+        if(accuracy <= 4){
+            return false;
+        }else{
+            return true;           
+        }
+    }
     
+    public String toString(){
+        return String.valueOf(this.player_health);
+    }
 }
 
