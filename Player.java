@@ -7,7 +7,7 @@ public class Player {
     double base_damage = 10;
     int trgvalue;
     Random dice = new Random();
-
+    int position = 0;
     Player(double player_health){
         this.player_health = player_health;
     }
@@ -29,6 +29,18 @@ public class Player {
             return true;           
         }
     }
+    
+    public void move(){
+        this.position += 1;
+    }
+    
+    //public double take_dmg
+    public void aim(){
+        
+        
+    }
+    //public void take_turn
+    //
     
     public String toString(){
         return String.valueOf(this.player_health);
