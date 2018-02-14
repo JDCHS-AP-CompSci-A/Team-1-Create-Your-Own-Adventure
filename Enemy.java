@@ -1,3 +1,4 @@
+
 import java.util.Random;
 
 public class Enemy {
@@ -34,7 +35,7 @@ public class Enemy {
     }
 
     public String toString(){
-        return this.name + " " + String.valueOf(this.health) + " " + String.valueOf(this.damage) + " " + String.valueOf(this.armor);
+        return this.name + " \u2665" + String.valueOf(this.health) + " " + String.valueOf(this.damage) + " " + String.valueOf(this.armor);
     }
     
     }

@@ -1,19 +1,33 @@
+
 import java.util.Random;
 import java.util.ArrayList;
 
 class Room {
+    String description;
     ArrayList<Enemy> enemylist = new ArrayList();
     Random dice = new Random();
     int e = dice.nextInt(3) + 1;
     
+    Room (String description){
+        this.description = description;
+    }
+    
     public void test(){
-         for (int l =0;l < this.enemylist.size(); l++){
-        System.out.print(this.enemylist.get(l));
+        System.out.println(this.description);
+        for (int l =0;l < this.enemylist.size(); l++)
+        {
+            System.out.print(this.enemylist.get(l));
         }
     }
 
     public String toString() {
-        return enemylist + "toms";
+        String blank = this.description;
+        blank = blank + "\nYou find " + this.enemylist.size() + " enemies \n";
+        for (int l =0;l < this.enemylist.size(); l++)
+        {
+            blank = blank + this.enemylist.get(l).toString() + "\n";
+        }
+        return blank;
     }
     
     public void getenemy(){
