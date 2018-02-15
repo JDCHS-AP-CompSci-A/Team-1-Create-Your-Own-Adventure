@@ -12,10 +12,9 @@ public class CCIBS {
         System.out.println(player_test.Dmg());
 
         //Boss has separate subclass
-        Room room_test = new Room();
+        Room room_test = new Room("test");
         room_test.getenemy();
         room_test.test();
-
         ArrayList<Room> roomlist = new ArrayList();
         roomlist.add(room_test);
         roomlist.add(room_test);
@@ -35,12 +34,11 @@ public class CCIBS {
             
             }
             if(YN == "N"){
-                break;        
-                    }
+                break;                            }
         }
-//            for (int i = 0 ; i < roomlist.size() ; i++){
-//                System.out.println(room_test.toString());
-//    }
+            for (int i = 0 ; i < roomlist.size() ; i++){
+                System.out.println(room_test.toString());
+    }
     }
 
 }
