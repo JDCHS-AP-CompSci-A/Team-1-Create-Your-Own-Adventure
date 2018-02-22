@@ -1,24 +1,18 @@
+
 import java.util.Scanner;
 
 public class ActionMenu {
-     Scanner take_action =  new Scanner(System.in);
-    int action_num;
+    Scanner take_action =  new Scanner(System.in);
     char action_letter;
     
-    public void instructions(){
-        System.out.println("Welcome to the player action menu! Please press 1 to take a shot or 'Q' to quit");
+    public String toString(){
+        return String.valueOf(takeshot_quit());
     }
     
-    public int takeshot(int action_num){
-        this.action_num = take_action.nextInt();
-        if(this.action_num == 1){   
+    public boolean takeshot_quit(){
+        this.action_letter = take_action.next(".").charAt(0);
+        if (this.action_letter == 'Q'){
         }
-        return 1;
+        return false;    
     }
-     
-    public boolean quit(char action_letter){
-        if(this.action_letter == 'Q'){
-        }
-        return true;
-    }  
 }

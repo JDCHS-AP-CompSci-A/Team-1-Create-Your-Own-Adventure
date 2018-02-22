@@ -1,13 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author josegalang
- */
-public class Boss {
-    
+import java.util.Random;
+
+public class Boss extends Enemy{
+     public Boss (String name, double health, double damage, int armor){
+         super(name ,health, damage, armor);      
+    }
+     
+    public void Regen(){
+        if (this.health < 240){
+            this.health += 5;
+        }
+        else{
+            System.out.println("They seem to be at full health!");
+        }
+    }
 }
