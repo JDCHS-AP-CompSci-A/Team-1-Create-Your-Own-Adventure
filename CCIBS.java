@@ -15,29 +15,32 @@ public class CCIBS {
         Room room_test = new Room("test");
         room_test.getenemy();
         room_test.test();
-        ArrayList<Room> roomlist = new ArrayList();
-        roomlist.add(room_test);
-        roomlist.add(room_test);
-        roomlist.add(room_test);
-        roomlist.add(room_test);
+        RoomGen roomgen_test = new RoomGen(4);
+        ArrayList<Room> roomlist = roomgen_test.roomlist;
 
-        while (player_test.position < 4) {
-            Room current_room = roomlist.get(player_test.position);
+        while (player_test.position < roomgen_test.roomlist.size()) {
+            Room current_room = roomgen_test.roomlist.get(player_test.position);
             current_room.test();
             System.out.println();
             System.out.println("Do you want to move? Y/N");
             Scanner sc = new Scanner(System.in);
             String YN = sc.nextLine();
-            if (YN == "Y") {
+            if ("Y".equals(YN)) {
                 player_test.move();
                 continue;
             
             }
-            if(YN == "N"){
-                break;                            }
+            if("N".equals(YN)){
+                break;        
+                    }
         }
-            for (int i = 0 ; i < roomlist.size() ; i++){
-                System.out.println(room_test.toString());
+            if (roomgen_test.roomlist.size() == 4){
+                System.out.println("End");
+                break;
+            }
+        }
+            for (int i = 0 ; i < roomgen_test.roomlist.size() ; i++){
+                System.out.println(roomgen_test.toString());
     }
     }
 
