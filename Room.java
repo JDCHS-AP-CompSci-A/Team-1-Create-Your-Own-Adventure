@@ -11,14 +11,6 @@ class Room {
     Room (String description){
         this.description = description;
     }
-    
-    public void test(){
-        System.out.println(this.description);
-        for (int l =0;l < this.enemylist.size(); l++)
-        {
-            System.out.print(this.enemylist.get(l));
-        }
-    }
 
     public String toString() {
         String blank = this.description;

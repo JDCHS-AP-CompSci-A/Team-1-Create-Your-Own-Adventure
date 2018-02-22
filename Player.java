@@ -2,14 +2,16 @@
 import java.util.Random;
 
 public class Player {
-
+    String name;
     double player_health;
     double base_damage = 10;
     int trgvalue;
     Random dice = new Random();
     int position = 0;
-    Player(double player_health){
+    
+    Player(String name, double player_health){
         this.player_health = player_health;
+        this.name = name;
     }
 
     public double Dmg() {
@@ -43,7 +45,7 @@ public class Player {
     //
     
     public String toString(){
-        return String.valueOf(this.player_health);
+        return this.name + (" \n") + String.valueOf(this.player_health) + " \u2665";  
     }
 }
 

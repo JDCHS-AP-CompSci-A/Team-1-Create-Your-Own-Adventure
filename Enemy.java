@@ -35,7 +35,7 @@ public class Enemy {
     }
 
     public String toString(){
-        return this.name + " \u2665" + String.valueOf(this.health) + " " + String.valueOf(this.damage) + " " + String.valueOf(this.armor);
+        return this.name + " " + String.valueOf(this.health) + "\u2665 " + String.valueOf(this.damage) + "\u2694 " + String.valueOf(this.armor) + " \u1F6E1";
     }
     
     }
