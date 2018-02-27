@@ -10,9 +10,10 @@ class Room {
     
     Room (String description){
         this.description = description;
+        this.getenemy();
     }
 
-    public String toString() {
+    public String toStringRoom() {
         String blank = this.description;
         blank = blank + "\nYou find " + this.enemylist.size() + " enemies \n";
         for (int l =0;l < this.enemylist.size(); l++)
@@ -21,8 +22,7 @@ class Room {
         }
         return blank;
     }
-    
-    public void getenemy(){
+   public void getenemy(){
        Enemy Grunt = new Enemy("Grunt", 20.0, 23.0, 10);
        Enemy Brute = new Enemy("Brute", 50.0, 32.0, 20);
        Enemy Elite = new Enemy("Elite", 15.0, 100.0, 0);
@@ -37,7 +37,11 @@ class Room {
             }if(type == 3){
                 this.enemylist.add(Elite);
             }
+            //if(this.roomlist.equals(4)){
+            //    this.enemylist.add(Boss);
+            //}
         }
+        
     }
-
+    
 }

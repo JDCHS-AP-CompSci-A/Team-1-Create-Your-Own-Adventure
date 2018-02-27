@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import java.util.Random;
 
 public class Boss extends Enemy{
@@ -14,4 +15,9 @@ public class Boss extends Enemy{
             System.out.println("They seem to be at full health!");
         }
     }
+=======
+public class Boss {
+    
+    
+>>>>>>> 304dad31c1dc11ecc4255ba3c8dc46233b101de8
 }

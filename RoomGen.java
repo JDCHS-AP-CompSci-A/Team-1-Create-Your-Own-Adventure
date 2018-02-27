@@ -8,6 +8,7 @@ public class RoomGen {
     ArrayList<Room> roomlist = new ArrayList();
     Random dice = new Random();
     int r = dice.nextInt(4) + 1;
+    int e = dice.nextInt(3) + 1;
 
     RoomGen(int numRoom) {
         this.numRoom = numRoom;
@@ -32,5 +33,15 @@ public class RoomGen {
                 
             }
         }
+    }
+ 
+    public String toStringGen(){
+        String blank = "";
+        for(int i = 0; i < this.roomlist.size(); i++){
+              Room room = this.roomlist.get(i);
+              blank += room.toStringRoom();
+
+        }
+        return blank;
     }
 }
