@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Boss extends Enemy{
      public Boss (String name, double health, double damage, int armor){
-         super(name ,health, damage, armor);      
+         super(name, health, damage, armor);      
     }
      
     public void Regen(){

@@ -3,16 +3,19 @@ import java.util.Scanner;
 
 public class ActionMenu {
     Scanner take_action =  new Scanner(System.in);
-    char action_letter;
+    String action_symbol;
     
     public String toString(){
         return String.valueOf(takeshot_quit());
     }
     
     public boolean takeshot_quit(){
-        this.action_letter = take_action.next(".").charAt(0);
-        if (this.action_letter == 'Q'){
-        }
-        return false;    
+        this.action_symbol = this.take_action.next();
+        this.take_action.nextLine();
+        if (this.action_symbol == "Q"){
+            return false;
+        }else if (this.action_symbol == "1"){        
+            }
+            return true;
     }
 }
