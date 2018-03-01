@@ -37,6 +37,9 @@ public class Player {
     }
     
     //public double take_dmg
+    
+    
+    
     public void aim(){
         
         
