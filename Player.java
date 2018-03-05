@@ -3,6 +3,7 @@ import java.util.Random;
 
 public class Player {
     String name;
+    double damage;
     double player_health;
     double base_damage = 10;
     int trgvalue;
@@ -15,12 +16,12 @@ public class Player {
     }
 
     public double Dmg() {
-        double damage = this.base_damage;
+        this.damage = this.base_damage;
         int accuracy = dice.nextInt(10) + 1;
         if (accuracy == 10) {
-            damage = this.base_damage * 1.5;
+            this.damage = this.base_damage * 1.5;
         }
-        return damage;
+        return this.damage;
     }
     
     public boolean Shoot(){
@@ -35,6 +36,11 @@ public class Player {
     public void move(){
         this.position += 1;
     }
+    public void player_attack(Enemy enemy){
+        if (this.Shoot() ){
+            enemy.enemy_health = enemy.enemy_health - this.damage;
+        }
+    }
     
     //public double take_dmg
     
@@ -47,7 +53,7 @@ public class Player {
     //public void take_turn
     //
     
-    public String toString(){
+    public String toStringPlayer(){
         return this.name + (" \n") + String.valueOf(this.player_health) + " \u2665";  
     }
 }
