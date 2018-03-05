@@ -38,7 +38,7 @@ public class Player {
     }
     public void player_attack(Enemy enemy){
         if (this.Shoot() ){
-            enemy.enemy_health = enemy.enemy_health - this.damage;
+            enemy.enemy_health = enemy.enemy_health - this.Dmg();
         }
     }
     
