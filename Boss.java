@@ -1,5 +1,4 @@
 
-
 import java.util.Random;
 
 public class Boss extends Enemy{
@@ -8,8 +7,8 @@ public class Boss extends Enemy{
     }
      
     public void Regen(){
-        if (this.health < 240){
-            this.health += 5;
+        if (this.enemy_health < 240){
+            this.enemy_health += 5;
         }
         else{
             System.out.println("They seem to be at full strength!");
