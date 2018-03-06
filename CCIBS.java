@@ -12,21 +12,50 @@ public class CCIBS {
         System.out.println(player_test.toString());
         System.out.println();
         
-        ArrayList<Room> roomlist = new ArrayList();
-        Room room_test = new Room("test");
-        Room dungeon = new Room("test");
-        roomlist.add(dungeon);
-        roomlist.add(room_test);
+        RoomGen roomgen = new RoomGen(5);
+        roomgen.getroom();
         
-        while (!roomlist.isEmpty()) {
-            Room current_room = roomlist.get(player_test.position);
-            System.out.println(current_room);
-            System.out.println("Would you like to move forward? (Hit 1 to move forward)");
-            int input = user_input.nextInt();
-            user_input.nextLine();
-            if(input == 1) {
-               roomlist.remove(player_test.position);
+
+        while (!roomgen.roomlist.isEmpty()) {
+            Room current_room = roomgen.roomlist.get(player_test.position);
+            System.out.println("--------------");
+            while(current_room.hasEnemies())
+            {
+               System.out.println(current_room);
+                System.out.println("--------------");
+                System.out.println("who to fight?");
+                System.out.println("--------------");
+                int position = user_input.nextInt();
+                user_input.nextLine();
+                System.out.println("--------------");
+                Enemy enemy_we_fight = current_room.enemylist.get(position);
+                System.out.println("you are fighting ");
+                System.out.println("--------------");
+                System.out.println(enemy_we_fight);
+                //menu and print out options for combat menu
+                System.out.println("--------------");
+                System.out.println("lets fight");
+                System.out.println("--------------");
+                //if i defeated the enemy
+                current_room.enemylist.remove(0);
+                
+                //if i did not
+                //woudl not remove and would just run loop again
+                
+                
+            
+            
+            if(!roomgen.roomlist.isEmpty()) {
+                System.out.println("Would you like to move forward? (Hit 1 to move forward)");
+                int input = user_input.nextInt();
+                user_input.nextLine();
+                if(input == 1) {
+                   roomgen.roomlist.remove(player_test.position);
+                }
             }
+            }
+            
+         
             
     }
 

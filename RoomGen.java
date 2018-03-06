@@ -18,7 +18,7 @@ public class RoomGen {
         Room palace_entrance = new Room("The entrance of an old Egyptian palace...");
         Room trap_door = new Room("You fell through a trap door into a pit... ");
         Room tunnel = new Room("The entrance of a mysterious tunnel...");
-        Room throne = new Room("The throne room!");
+        Throne throne = new Throne("The throne room!");
         
         for(int i = 0; i < this.r; i++){
             int type = dice.nextInt(4) + 1;
@@ -39,7 +39,7 @@ public class RoomGen {
         String blank = "";
         for(int i = 0; i < this.roomlist.size(); i++){
               Room room = this.roomlist.get(i);
-              blank += room.toStringRoom();
+              blank += room.toString();
 
         }
         return blank;

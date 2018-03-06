@@ -42,17 +42,7 @@ public class Player {
         }
     }
     
-    //public double take_dmg
-    
-    
-    
-    public void aim(){
-        
-        
-    }
-    //public void take_turn
-    //
-    
+
     public String toStringPlayer(){
         return this.name + (" \n") + String.valueOf(this.player_health) + " \u2665";  
     }
