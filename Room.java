@@ -18,10 +18,14 @@ class Room {
         blank = blank + "\nYou find " + this.enemylist.size() + " enemies \n";
         for (int l =0;l < this.enemylist.size(); l++)
         {
-            blank = blank + this.enemylist.get(l).toString() + "\n";
+            blank = blank + l + " " + this.enemylist.get(l).toString() + "\n";
         }
         return blank;
     }
+   public boolean hasEnemies(){
+       return !this.enemylist.isEmpty();
+   } 
+    
    public void getenemy(){
        Enemy Grunt = new Enemy("Grunt", 20.0, 23.0, 10);
        Enemy Brute = new Enemy("Brute", 50.0, 32.0, 20);
