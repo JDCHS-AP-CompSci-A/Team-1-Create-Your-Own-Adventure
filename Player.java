@@ -38,7 +38,12 @@ public class Player {
     }
     public void player_attack(Enemy enemy){
         if (this.Shoot() ){
+            System.out.println("hit");
+            
             enemy.enemy_health = enemy.enemy_health - this.Dmg();
+            System.out.println(this.Dmg());
+            System.out.println(enemy.enemy_health);
+            
         }
     }
     

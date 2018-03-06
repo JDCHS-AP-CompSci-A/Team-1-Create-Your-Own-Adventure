@@ -14,7 +14,7 @@ public class CCIBS {
         
         RoomGen roomgen = new RoomGen(5);
         roomgen.getroom();
-        
+        //ActionMenu action_menu = new ActionMenu();
 
         while (!roomgen.roomlist.isEmpty()) {
             Room current_room = roomgen.roomlist.get(player_test.position);
@@ -23,21 +23,33 @@ public class CCIBS {
             {
                System.out.println(current_room);
                 System.out.println("--------------");
-                System.out.println("who to fight?");
+                System.out.println("who will you fight?");
                 System.out.println("--------------");
                 int position = user_input.nextInt();
                 user_input.nextLine();
                 System.out.println("--------------");
                 Enemy enemy_we_fight = current_room.enemylist.get(position);
                 System.out.println("you are fighting ");
-                System.out.println("--------------");
                 System.out.println(enemy_we_fight);
+                System.out.println("--------------");
+                System.out.println("shoot? (1)");
+                int shoot = user_input.nextInt();
+                user_input.nextLine();
+                
+                    if (shoot == 1){
+                        player_test.player_attack(enemy_we_fight);
+                    }
+                   if (enemy_we_fight.enemy_health == 0){
+                       current_room.enemylist.remove(0);
+                   }
+                
+                
                 //menu and print out options for combat menu
                 System.out.println("--------------");
-                System.out.println("lets fight");
+                System.out.println("L");
                 System.out.println("--------------");
                 //if i defeated the enemy
-                current_room.enemylist.remove(0);
+                
                 
                 //if i did not
                 //woudl not remove and would just run loop again
@@ -45,7 +57,7 @@ public class CCIBS {
                 
             
             
-            if(!roomgen.roomlist.isEmpty()) {
+            if(roomgen.roomlist.isEmpty()) {
                 System.out.println("Would you like to move forward? (Hit 1 to move forward)");
                 int input = user_input.nextInt();
                 user_input.nextLine();
