@@ -38,11 +38,13 @@ public class Player {
     }
     public void player_attack(Enemy enemy){
         if (this.Shoot() ){
-            System.out.println("hit");
-            
+            System.out.println("HIT");
+            System.out.println();
             enemy.enemy_health = enemy.enemy_health - this.Dmg();
-            System.out.println(this.Dmg());
-            System.out.println(enemy.enemy_health);
+            System.out.println("You Deal " + this.Dmg() + " damage...");
+            System.out.println();
+            System.out.println("The enemy has " + enemy.enemy_health + " health...");
+            System.out.println("--------------");
             
         }
     }

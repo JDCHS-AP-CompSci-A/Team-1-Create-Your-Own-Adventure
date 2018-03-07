@@ -26,7 +26,7 @@ public class Enemy {
     }
     
     public boolean Shoot(){
-          if(this.accuracy <= 13){
+          if(this.accuracy <= 9){
               return false;
           }
           else{
@@ -39,8 +39,11 @@ public class Enemy {
         if(did_hit){
             double damage_done = this.Dmg();
             player.player_health -= damage_done;
+            System.out.println("--------------");
             System.out.println(this.name + " " + "attacks and hits for" + damage_done + " health");
-
+            System.out.println("Your health is " + player.player_health);
+            System.out.println("--------------");
+            
         }
         else {
             System.out.println(this.name + " missed");

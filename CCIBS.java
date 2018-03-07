@@ -29,25 +29,26 @@ public class CCIBS {
                 user_input.nextLine();
                 System.out.println("--------------");
                 Enemy enemy_we_fight = current_room.enemylist.get(position);
-                System.out.println("you are fighting ");
+                System.out.println("Targetted enemy " + enemy_we_fight);
                 System.out.println(enemy_we_fight);
                 System.out.println("--------------");
-                System.out.println("shoot? (1)");
+                System.out.println("Would you like to shoot? (1)");
                 int shoot = user_input.nextInt();
                 user_input.nextLine();
                 
                     if (shoot == 1){
                         player_test.player_attack(enemy_we_fight);
-                    }
-                   if (enemy_we_fight.enemy_health == 0){
+                        enemy_we_fight.Attack(player_test);
+                        if (enemy_we_fight.enemy_health <= 0){
                        current_room.enemylist.remove(0);
-                   }
+                        }
+                        
+                    }
+                   
                 
                 
                 //menu and print out options for combat menu
-                System.out.println("--------------");
-                System.out.println("L");
-                System.out.println("--------------");
+                
                 //if i defeated the enemy
                 
                 
@@ -57,7 +58,10 @@ public class CCIBS {
                 
             
             
-            if(roomgen.roomlist.isEmpty()) {
+            if(current_room.enemylist.isEmpty()) {
+                System.out.println("--------------");
+                System.out.println("All enemies have been defeated");
+                System.out.println("--------------");
                 System.out.println("Would you like to move forward? (Hit 1 to move forward)");
                 int input = user_input.nextInt();
                 user_input.nextLine();
@@ -112,4 +116,5 @@ public class CCIBS {
 //        }
 //    }
 //    }
+}
 }
