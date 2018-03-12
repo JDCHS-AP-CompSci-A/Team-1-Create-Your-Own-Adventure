@@ -29,7 +29,7 @@ class Room {
    public void getenemy(){
        Enemy Grunt = new Enemy("Grunt", 20.0, 23.0, 10);
        Enemy Brute = new Enemy("Brute", 50.0, 32.0, 20);
-       Enemy Elite = new Enemy("Elite", 15.0, 100.0, 0);
+       Enemy Elite = new Enemy("Elite", 10.0, 100.0, 0);
        
         
         for(int i = 0; i < this.e; i++){

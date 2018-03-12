@@ -7,7 +7,7 @@ public class RoomGen {
     int numRoom;
     ArrayList<Room> roomlist = new ArrayList();
     Random dice = new Random();
-    int r = dice.nextInt(4) + 1;
+    int r = dice.nextInt(4) + 3;
     int e = dice.nextInt(3) + 1;
 
     RoomGen(int numRoom) {
