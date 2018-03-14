@@ -16,9 +16,9 @@ public class ActionMenu {
         return position;
     }
     
-    public int shoot(Enemy enemy_we_fight, Room current_room, int position){
+    public int shoot(Room current_room, int position){
   
-        current_room.enemylist.get(position);
+        Enemy enemy_we_fight = current_room.enemylist.get(position);
         System.out.println("Targetted enemy " + enemy_we_fight);
         System.out.println(enemy_we_fight);
         System.out.println("--------------");
