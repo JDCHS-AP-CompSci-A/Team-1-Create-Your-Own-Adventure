@@ -8,7 +8,7 @@ public class CCIBS {
         Scanner user_input = new Scanner(System.in);
         System.out.println("Welcome to Crash Course in Brain Surgery");
 
-        Player player_test = new Player("Jacob", 10000.0);
+        Player player_test = new Player("Jacob", 600.0);
         System.out.println(player_test.toString());
         System.out.println();
 
@@ -17,8 +17,6 @@ public class CCIBS {
         //ActionMenu action_menu = new ActionMenu();
 
         while (player_test.position < roomgen.roomlist.size()) {
-            System.out.println(roomgen.roomlist.size());
-            System.out.println(!roomgen.roomlist.isEmpty());
             Room current_room = roomgen.roomlist.get(player_test.position);
             System.out.println("--------------");
             while (current_room.hasEnemies()) {

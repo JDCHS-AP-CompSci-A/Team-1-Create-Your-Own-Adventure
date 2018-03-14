@@ -27,19 +27,16 @@ class Room {
    } 
     
    public void getenemy(){
-       Enemy Grunt = new Enemy("Grunt", 20.0, 23.0, 10);
-       Enemy Brute = new Enemy("Brute", 50.0, 32.0, 20);
-       Enemy Elite = new Enemy("Elite", 10.0, 100.0, 0);
-       
+
         
         for(int i = 0; i < this.e; i++){
             int type = dice.nextInt(3) + 1;
             if(type == 1){
-                this.enemylist.add(Grunt);
+                this.enemylist.add(new Enemy("Grunt", 20.0, 32.0, 10));
             }if(type == 2){
-                this.enemylist.add(Brute);
+                this.enemylist.add(new Enemy("Brute", 50.0, 23.0, 20));
             }if(type == 3){
-                this.enemylist.add(Elite);
+                this.enemylist.add(new Enemy("Elite", 10.0, 100.0, 0));
             }
            
         }
