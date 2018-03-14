@@ -8,7 +8,7 @@ public class CCIBS {
         Scanner user_input = new Scanner(System.in);
         System.out.println("Welcome to Crash Course in Brain Surgery");
 
-        Player player_test = new Player("Jacob", 10000.0);
+        Player player_test = new Player("Jacob", 600.0);
         System.out.println(player_test.toString());
         System.out.println();
 
