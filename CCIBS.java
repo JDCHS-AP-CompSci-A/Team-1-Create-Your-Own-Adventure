@@ -17,8 +17,6 @@ public class CCIBS {
         //ActionMenu action_menu = new ActionMenu();
 
         while (player_test.position < roomgen.roomlist.size()) {
-            System.out.println(roomgen.roomlist.size());
-            System.out.println(!roomgen.roomlist.isEmpty());
             Room current_room = roomgen.roomlist.get(player_test.position);
             System.out.println("--------------");
             while (current_room.hasEnemies()) {
