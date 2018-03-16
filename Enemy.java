@@ -9,8 +9,6 @@ public class Enemy {
     int armor;
     Random dice = new Random();
     
-    
-    
     public Enemy(String name, double health, double damage, int armor){
         this.name = name;
         this.enemy_health = health;
@@ -51,7 +49,7 @@ public class Enemy {
         else {
             System.out.println(this.name + " missed");
         }
-}
+    }
 
     public String toString(){
         return this.name + " " + String.valueOf(this.enemy_health) + "\u2665 " + String.valueOf(this.enemy_damage) + "\u2694 " + String.valueOf(this.armor) + " \u1F6E1";

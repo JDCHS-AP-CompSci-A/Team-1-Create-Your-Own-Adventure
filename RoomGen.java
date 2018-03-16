@@ -10,10 +10,6 @@ public class RoomGen {
     int r = dice.nextInt(4) + 3;
     int e = dice.nextInt(3) + 1;
 
-    RoomGen(int numRoom) {
-        this.numRoom = numRoom;
-    }
-
     public void getroom() {
         Room palace_entrance = new Room("The entrance of an old Egyptian palace...");
         Room trap_door = new Room("You fell through a trap door into a pit... ");

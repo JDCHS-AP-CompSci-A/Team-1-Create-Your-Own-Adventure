@@ -17,7 +17,6 @@ public class ActionMenu {
     }
     
     public int shoot(Room current_room, int position){
-  
         Enemy enemy_we_fight = current_room.enemylist.get(position);
         System.out.println("Targetted enemy " + enemy_we_fight);
         System.out.println(enemy_we_fight);
@@ -30,18 +29,15 @@ public class ActionMenu {
         return shoot;   
     }
     
-    public void next_room(Room current_room, RoomGen roomgen, Player player_test){
-        if(current_room.enemylist.isEmpty()) {
+    public int next_room(Room current_room, RoomGen roomgen, Player player_test){
         System.out.println("--------------");
         System.out.println("All enemies have been defeated");
         System.out.println("--------------");
         System.out.println("Would you like to move forward? (Hit 1 to move forward)");
         int input = user_input.nextInt();
         user_input.nextLine();
-            if(input == 1) {
-               roomgen.roomlist.remove(player_test.position);
-            }
-        }
-    }       
+        return input;
+   
+}
 }
 

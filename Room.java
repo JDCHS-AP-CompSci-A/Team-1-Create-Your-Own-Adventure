@@ -22,13 +22,12 @@ class Room {
         }
         return blank;
     }
-   public boolean hasEnemies(){
+   
+    public boolean hasEnemies(){
        return !this.enemylist.isEmpty();
-   } 
+    } 
     
    public void getenemy(){
-
-        
         for(int i = 0; i < this.e; i++){
             int type = dice.nextInt(3) + 1;
             if(type == 1){
@@ -38,9 +37,6 @@ class Room {
             }if(type == 3){
                 this.enemylist.add(new Enemy("Elite", 10.0, 100.0, 0));
             }
-           
         }
-        
     }
-    
 }
