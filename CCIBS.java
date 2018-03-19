@@ -28,24 +28,21 @@ public class CCIBS {
                     player_test.player_attack(enemy_we_fight);
                     enemy_we_fight.Attack(player_test);
                     if (enemy_we_fight.enemy_health <= 0) {
-                        current_room.enemylist.remove(0);
+                        current_room.enemylist.remove(position);
                     }
                     if (player_test.player_health <= 0) {
                         System.out.print("You Died");
                         break;
                     }
                 }
-  
             }
-                    if (current_room.enemylist.isEmpty()){
-
+                if (current_room.enemylist.isEmpty()){
                 int input = action_menu.next_room(current_room, roomgen, player_test);
                 if(input == 1) {
                     player_test.position += 1;
                     }
                 }   
             
-    
             if (player_test.player_health <= 0) {
                 System.out.println("Game Over....");
                 break;
