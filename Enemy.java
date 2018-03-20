@@ -2,13 +2,18 @@
 import java.util.Random;
 
 public class Enemy {
-    
     String name;
     double enemy_health;
     double enemy_damage;
     int armor;
     Random dice = new Random();
-    
+    /**
+     * 
+     * @param name enemy name
+     * @param health enemy health 
+     * @param damage enemy damage
+     * @param armor enemy armor
+     */
     public Enemy(String name, double health, double damage, int armor){
         this.name = name;
         this.enemy_health = health;

@@ -3,13 +3,15 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class RoomGen {
-
     int numRoom;
     ArrayList<Room> roomlist = new ArrayList();
     Random dice = new Random();
     int r = dice.nextInt(4) + 3;
     int e = dice.nextInt(3) + 1;
-
+    
+    /**
+     * Function spawns 4 types of rooms based on what the 'dice' random number generator rolls
+     */
     public void getroom() {
         Room palace_entrance = new Room("The entrance of an old Egyptian palace...");
         Room trap_door = new Room("You fell through a trap door into a pit... ");
@@ -30,13 +32,15 @@ public class RoomGen {
             }
         }
     }
- 
+    /**
+     * toString function for RoomGen class, prints out types of rooms that are spawned
+     * @return String named blank defined in toString function
+     */
     public String toStringGen(){
         String blank = "";
         for(int i = 0; i < this.roomlist.size(); i++){
               Room room = this.roomlist.get(i);
               blank += room.toString();
-
         }
         return blank;
     }

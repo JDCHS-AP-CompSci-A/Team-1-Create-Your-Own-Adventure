@@ -1,6 +1,9 @@
 
 import java.util.Scanner;
-
+/**
+ * 
+ * @author jacobwhitehead
+ */
 public class ActionMenu {
     Scanner user_input = new Scanner(System.in);
     

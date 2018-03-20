@@ -34,8 +34,9 @@ public class CCIBS {
                         System.out.print("You Died");
                         break;
                     }
-                }
+                } 
             }
+            
                 if (current_room.enemylist.isEmpty()){
                 int input = action_menu.next_room(current_room, roomgen, player_test);
                 if(input == 1) {

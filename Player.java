@@ -10,11 +10,19 @@ public class Player {
     Random dice = new Random();
     int position = 0;
     
+    /**
+     * Constructor handles player name and health
+     * @param name The name of the player
+     * @param player_health Numerical amount of health the player has
+     */
     Player(String name, double player_health){
         this.player_health = player_health;
         this.name = name;
     }
-
+    /**
+     * Function calculates damage done
+     * @return the numerical amount of damage the player deals based on what the 'dice' rolls
+     */
     public double Dmg() {
         this.damage = this.base_damage;
         int accuracy = dice.nextInt(10) + 1;
@@ -23,7 +31,10 @@ public class Player {
         }
         return this.damage;
     }
-    
+    /**
+     * Function rolls a dice to determine if the player hits or misses
+     * @return boolean indicating hit or miss
+     */
     public boolean Shoot(){
         int accuracy = dice.nextInt(10) + 1;
         if(accuracy <= 4){
@@ -32,10 +43,16 @@ public class Player {
             return true;           
         }
     }
-    
+    /**
+     * Function allows player to change room
+     */
     public void move(){
         this.position += 1;
     }
+    /**
+     * Function handles dialogue and how much damage player deals 
+     * @param enemy the literal enemy player will attack
+     */
     public void player_attack(Enemy enemy){
         if (this.Shoot() ){
             System.out.println("--------------");
@@ -51,8 +68,10 @@ public class Player {
             System.out.println();
         }
     }
-    
-
+    /**
+     * Prints health and name
+     * @return health and name attributes from constructor
+     */
     public String toStringPlayer(){
         return this.name + (" \n") + String.valueOf(this.player_health) + " \u2665";  
     }
