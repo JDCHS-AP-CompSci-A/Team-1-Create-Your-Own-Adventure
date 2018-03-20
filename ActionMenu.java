@@ -14,6 +14,10 @@ public class ActionMenu {
         System.out.println("--------------");
         int position = user_input.nextInt();
         user_input.nextLine();
+        if(position > current_room.enemylist.size() - 1) {
+            System.out.println("ERROR enter a valid position");
+            return fight_menu(current_room);
+        } 
         System.out.println("--------------");
 
         return position;
