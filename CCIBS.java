@@ -2,7 +2,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CCIBS {
-
+    /**
+     * creates a new scanner called user_input
+     * prints welcome message
+     * creates a new player called player_test with attributes "Jacob" and 10000.0
+     * prints out attributes created in player_test
+     * creates new RoomGen called roomgen 
+     * @param args 
+     */
     public static void main(String[] args) {
         Scanner user_input = new Scanner(System.in);
         System.out.println("Welcome to Crash Course in Brain Surgery");
@@ -14,7 +21,9 @@ public class CCIBS {
         RoomGen roomgen = new RoomGen();
         roomgen.getroom();
         ActionMenu action_menu = new ActionMenu();
-
+        /**
+         * 
+         */
         while (player_test.position < roomgen.roomlist.size()) {
             Room current_room = roomgen.roomlist.get(player_test.position);
             System.out.println("--------------");
@@ -37,12 +46,12 @@ public class CCIBS {
                 } 
             }
             
-                if (current_room.enemylist.isEmpty()){
-                int input = action_menu.next_room(current_room, roomgen, player_test);
-                if(input == 1) {
-                    player_test.position += 1;
-                    }
-                }   
+            if (current_room.enemylist.isEmpty()){
+            int input = action_menu.next_room(current_room, roomgen, player_test);
+            if(input == 1) {
+                player_test.position += 1;
+                }
+            }   
             
             if (player_test.player_health <= 0) {
                 System.out.println("Game Over....");
