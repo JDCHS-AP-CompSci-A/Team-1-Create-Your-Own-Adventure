@@ -70,12 +70,12 @@ public class CCIBS {
             /**
              * if player's health is less than 0 then the game ends
              */
-                if (current_room.enemylist.isEmpty()){
-                int input = action_menu.next_room(current_room, roomgen, player_test);
-                if(input == 1) {
-                    roomgen.roomlist.remove(player_test.position);
-                    }
-                }   
+            if (current_room.enemylist.isEmpty()){
+            int input = action_menu.next_room(current_room, roomgen, player_test);
+            if(input == 1) {
+                roomgen.roomlist.remove(player_test.position);
+                }
+            }   
             if (player_test.player_health <= 0) {
                 System.out.println("Game Over....");
                 break;
