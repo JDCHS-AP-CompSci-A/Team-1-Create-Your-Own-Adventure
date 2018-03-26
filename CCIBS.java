@@ -22,13 +22,9 @@ public class CCIBS {
         RoomGen roomgen = new RoomGen();
         roomgen.getroom();
         ActionMenu action_menu = new ActionMenu();
-<<<<<<< HEAD
         /**
          * while loop - calls on roomgen to spawn a room, player is placed in the room, room info is printed
          */
-=======
-        
->>>>>>> 455d80b2986c560b88cfd1189e341f1d25005eba
         while (player_test.position < roomgen.roomlist.size()) {
             Room current_room = roomgen.roomlist.get(player_test.position);
             System.out.println("--------------");
@@ -47,13 +43,10 @@ public class CCIBS {
                     player_test.player_attack(enemy_we_fight);
                     if (enemy_we_fight.enemy_health > 0){
                     enemy_we_fight.Attack(player_test);
-<<<<<<< HEAD
                     /**
                      * after player_attack and Attack have ran the enemy's health and player's health will be checked resulting in either an enemy removed or game over for the player
                      */
-=======
                     }
->>>>>>> 455d80b2986c560b88cfd1189e341f1d25005eba
                     if (enemy_we_fight.enemy_health <= 0) {
                         current_room.enemylist.remove(position);
                     }
@@ -63,7 +56,6 @@ public class CCIBS {
                     }
                 } 
             }
-<<<<<<< HEAD
             /**
              * if the ArrayList called enemylist within the spawned room is empty then the player is prompted to change rooms 
              */
@@ -76,16 +68,12 @@ public class CCIBS {
             /**
              * if player's health is less than 0 then the game ends
              */
-=======
-            
                 if (current_room.enemylist.isEmpty()){
                 int input = action_menu.next_room(current_room, roomgen, player_test);
                 if(input == 1) {
                     roomgen.roomlist.remove(player_test.position);
                     }
                 }   
-            
->>>>>>> 455d80b2986c560b88cfd1189e341f1d25005eba
             if (player_test.player_health <= 0) {
                 System.out.println("Game Over....");
                 break;
