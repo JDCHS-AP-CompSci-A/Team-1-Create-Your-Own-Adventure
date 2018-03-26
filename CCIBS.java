@@ -42,7 +42,7 @@ public class CCIBS {
                 if (current_room.enemylist.isEmpty()){
                 int input = action_menu.next_room(current_room, roomgen, player_test);
                 if(input == 1) {
-                    player_test.position += 1;
+                    roomgen.roomlist.remove(player_test.position);
                     }
                 }   
             
