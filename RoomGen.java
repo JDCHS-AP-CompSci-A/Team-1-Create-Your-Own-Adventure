@@ -13,21 +13,16 @@ public class RoomGen {
      * Function spawns 4 types of rooms based on what the 'dice' random number generator rolls
      */
     public void getroom() {
-        Room palace_entrance = new Room("The entrance of an old Egyptian palace...");
-        Room trap_door = new Room("You fell through a trap door into a pit... ");
-        Room tunnel = new Room("The entrance of a mysterious tunnel...");
-        Throne throne = new Throne("The throne room!");
-        
         for(int i = 0; i < this.r; i++){
             int type = dice.nextInt(4) + 1;
             if(type == 1){
-                this.roomlist.add(palace_entrance);
+                this.roomlist.add(new Room ("The entrance of an old Egyptian palace..."));
             }if(type == 2){
-                this.roomlist.add(trap_door);
+                this.roomlist.add(new Room("You fell through a trap door into a pit... "));
             }if(type == 3){
-                this.roomlist.add(tunnel);
+                this.roomlist.add(new Room("The entrance of a mysterious tunnel..."));
             }if(type == 4){
-                this.roomlist.add(throne);
+                this.roomlist.add(new Throne("The throne room!"));
                 
             }
         }

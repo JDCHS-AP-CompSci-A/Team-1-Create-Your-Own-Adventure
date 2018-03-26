@@ -5,7 +5,7 @@ public class Player {
     String name;
     double damage;
     double player_health;
-    double base_damage = 1000;
+    double base_damage = 25;
     int trgvalue;
     Random dice = new Random();
     int position = 0;
