@@ -18,7 +18,7 @@ public class Throne extends Room {
  */
     @Override
     public void getenemy() {
-        Enemy Boss = new Boss("Boss", 240.0, 60.0, 30);
+        Enemy Boss = new Boss("Boss", 200.0, 50.0, 30);
                 this.enemylist.add(Boss);
             
         }

@@ -15,7 +15,7 @@ public class CCIBS {
         Scanner user_input = new Scanner(System.in);
         System.out.println("Welcome to Crash Course in Brain Surgery");
 
-        Player player_test = new Player("The Big Gay", 600.0);
+        Player player_test = new Player("The Big Gay", 800.0);
         System.out.println(player_test.toStringPlayer());
         System.out.println();
 
@@ -75,7 +75,7 @@ public class CCIBS {
                     }
                 }   
             if (player_test.player_health <= 0) {
-                System.out.println("Game Over....");
+                System.out.println(" Game Over....");
                 break;
             }
             /**
